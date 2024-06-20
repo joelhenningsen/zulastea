@@ -1,0 +1,140 @@
+/* Desktop view */
+.order-button-desktop {
+    display: none; /* Hidden by default, will be shown in larger screens */
+}
+
+/* Mobile view */
+.order-button-mobile {
+    display: inline-block; /* Shown by default, will be hidden in larger screens */
+}
+
+/* Custom Navbar Styling */
+.navbar {
+    padding: 10px 15px; /* Increase top and bottom padding */
+    font-size: 1.1rem; /* Increase font size if needed */
+}
+
+/* Adjust the size of the navbar brand/logo */
+.navbar-brand img {
+    height: 60px; /* Adjust the height of your logo */
+}
+
+/* Adjust the navbar link padding for larger navbar */
+.navbar-nav .nav-item .nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.maps-container {
+    display: flex;
+    justify-content: space-around; /* Adjusts spacing between iframes */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+}
+
+.responsive-map {
+    width: 100%; /* Full width for all views */
+    height: 450px; /* Adjust height as needed */
+    border: 0;
+}
+
+#home {
+    position: relative;
+    height: 100vh; /* 100% of the viewport height */
+    width: 100%; /* 100% of the viewport width */
+    overflow: hidden; /* Prevents scrollbars if image is larger than viewport */
+}
+
+#home img {
+    max-width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the div without being stretched */
+    object-position: center; /* Can adjust to different parts of image */
+}
+
+#home .text-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+    z-index: 10; /* Ensure it's above the image */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    z-index: 1; /* Ensures the overlay is above the image, but below the text */
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Makes text above certain elements */
+}
+
+section {
+    scroll-margin-top: 80px; /* Navbar's height */
+}
+
+.footer-background {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+#about, #reviews {
+    background-color: #f9f9f9;
+}
+
+#about p, #reviews blockquote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#reviews blockquote {
+    font-style: italic;
+    border-left: 5px solid #ff4500;
+    padding-left: 15px;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adds a slight roundness to the corners of the image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow to the image */
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+
+/* Red line for testing */
+/* * {
+    border: 1px solid red;
+} */
+    
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 992px) {
+    .order-button-desktop {
+        display: inline-block; /* Show for desktops and larger screens */
+    }
+    .order-button-mobile {
+        display: none; /* Hide for desktops and larger screens */
+    }
+}
+
+/* Styles for screens less than 768px wide */
+@media (max-width: 767px) {
+    .responsive-map {
+        height: 250px; /* Reduced height for smaller screens */
+    }
+}
