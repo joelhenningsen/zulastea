@@ -27,9 +27,12 @@
             <!-- Center: Navigation Links -->
             <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex md:space-x-8">
                 <a href="#" class="text-white inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Home</a>
+                <a href="#best-sellers" class="text-white hover:text-gray-200 inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Best Sellers</a>
+                <a href="menu.html" class="text-white hover:text-gray-200 inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Menu</a>
                 <a href="#contact" class="text-white hover:text-gray-200 inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Contact</a>
 
             </div>
+
 
             <!-- Right: Order Button -->
             <!-- <div class="flex-shrink-0">
@@ -54,38 +57,61 @@
     </div>
 </div>
 
-<!-- Menu Section -->
-<!-- <section id="best-sellers" class="py-16 bg-white">
+<!-- Best Sellers Section -->
+<section id="best-sellers" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-        <h2 class="text-3xl font-bold text-gray-900">Best Sellers</h2>
-        <p class="mt-4 text-lg text-gray-600">100% Halal Beef & Chicken</p>
+            <h2 class="text-3xl font-bold text-gray-900">Best Sellers</h2>
+            <p class="mt-4 text-lg text-gray-600">Customer favorites you won't want to miss!</p>
         </div>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
-        <!--  Double Smashback -->
-        <!-- <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-            <img class="h-40 w-full object-cover object-center mb-4" src="burger1.jpg" alt="Double Smashback Burger">
-            <h3 class="text-lg font-medium text-gray-900">Double Smashback</h3>
-            <p class="text-gray-600 mt-2">1/3 lb patty smash burger with pickles, house sauce, and american cheese.</p>
-            <span class="block mt-4 text-smashRed font-bold">$14.00</span>
-        </div> -->
-        <!-- Chicken Sandwich -->
-        <!-- <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-            <img class="h-40 w-full object-cover object-center mb-4" src="burger2.jpg" alt="Fried Chicken Sandwich">
-            <h3 class="text-lg font-medium text-gray-900">Chicken Sandwich</h3>
-            <p class="text-gray-600 mt-2">Fried chicken sandwich with pickles, coleslaw, and house sauce.</p>
-            <span class="block mt-4 text-smashRed font-bold">$12.00</span>
-        </div> -->
-        <!-- Philly Cheesesteak -->
-        <!-- <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-            <img class="h-40 w-full object-cover object-center mb-4" src="burger3.jpg" alt="Beef Philly Cheesesteak">
-            <h3 class="text-lg font-medium text-gray-900">Philly Cheesesteak</h3>
-            <p class="text-gray-600 mt-2">Beef steak with peppers and onions, topped with a choice of american or provolone cheese.</p>
-            <span class="block mt-4 text-smashRed font-bold">$13.00</span>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Brown Sugar Milk Tea -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <img 
+                    src="src/assets/img/bsmt.png" 
+                    srcset="src/assets/img/bsmt.png 400w, src/assets/img/bsmt.png 800w" 
+                    sizes="(max-width: 600px) 400px, 800px" 
+                    alt="Brown Sugar Milk Tea" 
+                    class="w-full h-auto object-contain rounded-md mb-4">
+                <h3 class="text-lg font-medium text-gray-900">Brown Sugar Milk Tea</h3>
+                <p class="text-gray-600 mt-2 text-center">Rich and creamy milk tea with brown sugar syrup.</p>
+                <span class="block mt-4 text-smashRed font-bold">$6.00</span>
+            </div>
+            <!-- Mango Passion Green Tea -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <img 
+                    src="src/assets/img/mpagt.png" 
+                    srcset="src/assets/img/mpagt.png 400w, src/assets/img/mpagt.png 800w" 
+                    sizes="(max-width: 600px) 400px, 800px" 
+                    alt="Mango Passion Green Tea" 
+                    class="w-full h-auto object-contain rounded-md mb-4">
+                <h3 class="text-lg font-medium text-gray-900">Mango Passion Green Tea</h3>
+                <p class="text-gray-600 mt-2 text-center">Refreshing mango and passion fruit with green tea.</p>
+                <span class="block mt-4 text-smashRed font-bold">$6.00</span>
+            </div>
+            <!-- Blended Taro -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <img 
+                    src="src/assets/img/bt.png" 
+                    srcset="src/assets/img/bt.png 400w, src/assets/img/bt.png 800w" 
+                    sizes="(max-width: 600px) 400px, 800px" 
+                    alt="Blended Taro" 
+                    class="w-full h-auto object-contain rounded-md mb-4">
+                <h3 class="text-lg font-medium text-gray-900">Blended Taro</h3>
+                <p class="text-gray-600 mt-2 text-center">A creamy taro blend, perfect for any taro lover.</p>
+                <span class="block mt-4 text-smashRed font-bold">$7.00</span>
+            </div>
         </div>
+        <!-- See Full Menu Button -->
+        <div class="mt-8 text-center">
+            <a href="menu.html" class="bg-smashYellow text-gray-900 py-3 px-6 rounded-full text-lg font-medium hover:bg-smashRed hover:text-white">
+                See Menu
+            </a>
         </div>
     </div>
-</section> -->
+</section>
+
+
 
 <!-- Contact Section -->
 <section id="contact" class="py-16 bg-gray-50">
