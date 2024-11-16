@@ -786,6 +786,11 @@ video {
   background-color: rgb(239 160 203 / var(--tw-bg-opacity));
 }
 
+.bg-zulasLightPink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 231 243 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -930,6 +935,11 @@ video {
 .hover\:border-zulasDarkerPink:hover {
   --tw-border-opacity: 1;
   border-color: rgb(239 160 203 / var(--tw-border-opacity));
+}
+
+.hover\:bg-zulasDarkerPink:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 160 203 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-200:hover {
