@@ -1,169 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Speciality food cart servings bubble tea, coffee, taiyaki, soft serve, and paninis to Canby, OR. Located at the Canby Beer Library.">
-    <title>ZULA'S TEA & COFFEE | Boba - Coffee - Taiyaki | Canby 2024</title>
-    <link href="dist/styles.css" rel="stylesheet">
-    
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="src/assets/favicons/site.webmanifest">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zula's Tea & Coffee - Bubble tea, coffee, & soft serve in Canby, OR.">
+    <title>Zula's Tea & Coffee</title>
+
+    <!-- Tailwind CSS -->
+    <link href="dist/styles.css" rel="stylesheet" />
+
+    <!-- Swiper Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="src/assets/favicons/favicon-32x32.png" />
+
+    <!-- Fix horizontal scroll issue -->
+    <style>
+    html, body {
+        overflow-x: hidden;
+    }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900 pt-20">
+<body class="bg-white text-gray-800 font-sans scroll-smooth">
 
-<!-- Navbar -->
-<nav class="bg-black shadow fixed top-0 left-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="relative flex justify-between items-center h-20">
-            <!-- Left: Logo -->
-            <div class="flex-shrink-0">
-                <img class="h-16" src="src/assets/img/horizontal-logo.png" alt="ZULA'S Logo">
-            </div>
-            
-            <!-- Center: Navigation Links -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex md:space-x-8">
-                <a href="#" class="text-white inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Home</a>
-                <a href="#best-sellers" class="text-white hover:text-gray-200 inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Best Sellers</a>
-                <a href="menu.html" class="text-white hover:text-gray-200 inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Menu</a>
-                <a href="#contact" class="text-white hover:text-gray-200 inline-flex items-center px-3 pt-1 border-b-2 border-transparent text-lg font-medium hover:border-zulasDarkerPink">Contact</a>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <img src="src/assets/img/horizontal-new-font.png" alt="Zula Logo" class="h-12">
 
-            </div>
-
-
-            <!-- Right: Order Button -->
-            <div class="flex-shrink-0">
-                <a href="https://order.online/business/zulas-tea--coffee-13615025" class="bg-zulasLightPink text-gray-900 py-3 px-6 rounded-full text-lg font-medium hover:bg-zulasDarkerPink hover:text-white">
-                    Order Now
-                </a>
-            </div>
-        </div>
+        <!-- Mobile: Order button + Hamburger -->
+    <div class="flex items-center space-x-3 md:hidden">
+        <a href="https://order.online/business/zulas-tea--coffee-13615025"
+            class="bg-zulasPink text-white text-sm px-4 py-1.5 rounded-full shadow hover:opacity-90 transition">
+            Order
+        </a>
+        <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
     </div>
-</nav>
 
-
-
-<!-- Hero Section -->
-<div class="bg-cover bg-center h-screen" style="background-image: url('src/assets/img/hero-zulas.jpg');">
-    <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
-        <div class="text-center">
-        <h1 class="text-white text-5xl font-bold">Canby's First Bubble Tea Shop</h1>
-        <p class="text-white text-xl mt-4">Treat yourself to bubble tea, coffee, taiyaki, and paninis!</p>
-        <a href="https://order.online/business/zulas-tea--coffee-13615025" class="mt-6 inline-block bg-zulasLightPink text-gray-900 py-3 px-6 rounded-full text-lg font-medium hover:bg-zulasDarkerPink hover:text-white"">Order Now</a>
-        </div>
-    </div>
-</div>
-
-<!-- Best Sellers Section -->
-<section id="best-sellers" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-            <h2 class="text-3xl font-bold text-gray-900">Best Sellers</h2>
-            <p class="mt-4 text-lg text-gray-600">Customer favorites you won't want to miss!</p>
-        </div>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Brown Sugar Milk Tea -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <img 
-                    src="src/assets/img/bsmt.png" 
-                    srcset="src/assets/img/bsmt.png 400w, src/assets/img/bsmt.png 800w" 
-                    sizes="(max-width: 600px) 400px, 800px" 
-                    alt="Brown Sugar Milk Tea" 
-                    class="w-full h-auto object-contain rounded-md mb-4">
-                <h3 class="text-lg font-medium text-gray-900">Brown Sugar Milk Tea</h3>
-                <p class="text-gray-600 mt-2 text-center">Rich and creamy milk tea with brown sugar syrup.</p>
-                <span class="block mt-4 text-smashRed font-bold">$6.00</span>
-            </div>
-            <!-- Mango Passion Green Tea -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <img 
-                    src="src/assets/img/mpagt.png" 
-                    srcset="src/assets/img/mpagt.png 400w, src/assets/img/mpagt.png 800w" 
-                    sizes="(max-width: 600px) 400px, 800px" 
-                    alt="Mango Passion Green Tea" 
-                    class="w-full h-auto object-contain rounded-md mb-4">
-                <h3 class="text-lg font-medium text-gray-900">Mango Passion Green Tea</h3>
-                <p class="text-gray-600 mt-2 text-center">Refreshing mango and passion fruit with green tea.</p>
-                <span class="block mt-4 text-smashRed font-bold">$6.00</span>
-            </div>
-            <!-- Blended Taro -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <img 
-                    src="src/assets/img/bt.png" 
-                    srcset="src/assets/img/bt.png 400w, src/assets/img/bt.png 800w" 
-                    sizes="(max-width: 600px) 400px, 800px" 
-                    alt="Blended Taro" 
-                    class="w-full h-auto object-contain rounded-md mb-4">
-                <h3 class="text-lg font-medium text-gray-900">Blended Taro</h3>
-                <p class="text-gray-600 mt-2 text-center">A creamy taro blend, perfect for any taro lover.</p>
-                <span class="block mt-4 text-smashRed font-bold">$7.00</span>
-            </div>
-        </div>
-        <!-- See Full Menu Button -->
-        <div class="mt-8 text-center">
-            <a href="menu.html" class="bg-smashYellow text-gray-900 py-3 px-6 rounded-full text-lg font-medium hover:bg-smashRed hover:text-white">
-                See Menu
+        <!-- Nav Links -->
+        <ul id="nav-menu" class="hidden md:flex space-x-6 font-medium text-sm items-center md:static absolute top-20 left-0 w-full md:w-auto bg-white md:bg-transparent px-4 md:px-0 py-4 md:py-0 shadow md:shadow-none z-40">
+        <li>
+            <a href="https://order.online/business/zulas-tea--coffee-13615025"
+                class="block text-center bg-zulasPink text-white px-5 py-2 rounded-full shadow hover:opacity-90 transition md:inline">
+                Order
             </a>
-        </div>
+        </li>
+        <li><a href="#about" class="block py-2 text-center hover:text-zulasPink">About Us</a></li>
+        <li><a href="#contact" class="block py-2 text-center hover:text-zulasPink">Contact</a></li>
+        </ul>
     </div>
-</section>
+    </nav>
 
-
-
-<!-- Contact Section -->
-<section id="contact" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-        <h2 class="text-3xl font-bold text-gray-900">Contact Us</h2>
-        <p class="mt-4 text-lg text-gray-600">Get in touch with us or visit us at our location!</p>
-        </div>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Business Info -->
-        <div>
-            <h3 class="text-xl font-semibold text-gray-900">Our Business Info</h3>
-            <p class="mt-4 text-gray-700"><strong>Email:</strong> info@zulastea.com</p>
-            <p class="mt-2 text-gray-700"><strong>Phone:</strong> (503) 592-7006</p>
-            <p class="mt-2 text-gray-700"><strong>Address:</strong> 292 N Holly St, Canby, OR 97013</p>
-            <p class="mt-2 text-gray-700"><strong>Open Hours:</strong></p>
-            <ul class="list-disc list-inside text-gray-700">
-            <li>Please check our Google Maps listing for up-to-date hours.</li>
-            </ul>
-        </div>
-        <!-- Google Maps Embed -->
-        <div>
-            <h3 class="text-xl font-semibold text-gray-900">Find Us on the Map</h3>
-            <div class="mt-4">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1605.9021061837577!2d-122.69575912186298!3d45.263704630881904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549565006902afdf%3A0x6cc95c6f44d08b3e!2sZula&#39;s%20Tea%20%26%20Coffee!5e0!3m2!1sen!2sus!4v1730925999242!5m2!1sen!2sus"
-                width="100%"
-                height="300"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
+    <!-- Hero Carousel -->
+    <section class="mt-20">
+    <div class="w-screen h-[500px] overflow-hidden">
+        <div class="swiper-container h-full">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            <img src="src/assets/img/background-small.jpg" class="w-full h-full object-cover" alt="Zula Hero 1" />
+            </div>
+            <div class="swiper-slide">
+            <img src="src/assets/img/hero-zulas.jpg" class="w-full h-full object-cover" alt="Zula Hero 2" />
             </div>
         </div>
         </div>
     </div>
-  </section>
-  
 
-<!-- Footer -->
-<footer class="bg-zulasDarkerPink py-6">
-    <div class="text-center text-white">
-        &copy; 2024 Zula's Tea & Coffee. All rights reserved.
-        <!-- Instagram Link in Footer -->
-        <div class="mt-4">
-            <a href="https://www.instagram.com/zulastea" target="_blank">
-                <img src="src/assets/img/Instagram_Glyph_White.png" alt="Instagram Icon" class="h-6 w-6 inline-block">
-            </a>
-        </div>
+    <div class="text-center py-8 px-4">
+        <h1 class="text-3xl font-bold">Canby’s First Bubble Tea Shop</h1>
+        <p class="text-gray-600 mt-2 max-w-xl mx-auto">Serving drinks and snacks you’ll love — boba, coffee, soft serve & more.</p>
+        
     </div>
-</footer>
+    </section>
 
-  
-</body>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4">About Us</h2>
+        <p class="text-gray-700">Zula's Tea & Coffee is a family-run food cart based in Canby, OR. We bring big flavors to a small town with our rotating menu of boba tea, seasonal soft serve, and more.</p>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4">Contact</h2>
+        <p class="text-gray-700">
+            Follow us on Instagram
+            <a href="https:/instagram.com/zulastea" class="text-zulasPink" target="_blank" rel="noopener noreferrer">
+            @zulastea
+            </a>    
+            for updates. For the most accurate and current hours, please refer to our
+            <a href="https://maps.app.goo.gl/z6VEXV6kG6Qn6jrA9" class="text-zulasPink" target="_blank" rel="noopener noreferrer">
+              Google Maps listing
+            </a>.
+            For inquiries, email us at
+            <a href="mailto:info@zulastea.com" class="text-zulasPink">info@zulastea.com</a>.
+          </p>
+          
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500">
+    © 2025 Zula's Tea & Coffee. All rights reserved.
+    <!-- Instagram Link in Footer -->
+    <div class="mt-4">
+        <a href="https://www.instagram.com/zulastea" target="_blank">
+            <img src="src/assets/img/Instagram_Glyph_Gradient.png" alt="Instagram Icon" class="h-6 w-6 inline-block">
+        </a>
+    </div>
+    </footer>
+
+    <!-- Swiper + Menu Toggle Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    // Initialize Swiper
+    new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+        delay: 4000,
+        },
+        speed: 800,
+    });
+
+    // Hamburger toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+    });
+    </script>
+    </body>
 </html>

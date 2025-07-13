@@ -7,8 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'zulasLightPink': '#FFE7F3',
-        'zulasDarkerPink': '#EFA0CB',
+        'zulasPink': '#eba0c6'
       },
     }
   },
